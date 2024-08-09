@@ -3,7 +3,7 @@
         const imageFilePath = "images/";
         const numImages = 18;
         const flipExcludedCutoff = 19; //NOTE: this number represents the cutoff for where the non flippable images start
-        const flipRandomPercent = 0; //NOTE: the number represents how many numbers to randomly choose. bigger = less likely, smaller = more likely.
+        const flipRandomPercent = 2; //NOTE: the number represents how many numbers to randomly choose. bigger = less likely, smaller = more likely.
         var isEnabled = true;
 
         //NOTE: The purpose of this function is to get all YouTube thumbnails on the page
