@@ -1,25 +1,30 @@
 {
-    "manifest_version": 2,
-    "name": "YouTube MrBeastify",
-    "version": "1.7.1",
+    "manifest_version": 3,
+    "name": "YouTube Beatboxify",
+    "version": "1.0.0",
     "icons": {
         "96": "icon.png"
     },
-    "description": "Modify YouTube thumbnails to include MrBeast",
-    "browser_action": {
+    "description": "Modify YouTube thumbnails to include Beatbox",
+    "action": {
         "default_popup": "settings.html"
     },
     "permissions": [
-        "storage",
-        "*://*.youtube.com/*"
+        "storage"
     ],
+    "host_permissions": ["*://*.youtube.com/*"],
     "content_scripts": [{
         "matches": ["*://*.youtube.com/*"],
-        "js": ["mrbeastify.js"],
+        "js": ["beatboxify.js"],
         "run_at": "document_idle"
     }],
-    "web_accessible_resources": [
-        "images/*.png",
-        "images/*.json"
-    ]
+    "web_accessible_resources": [{
+        "resources": [
+            "images/*.png",
+            "images/*.json"
+        ],
+        "matches": [
+            "*://*/*"
+        ]
+    }]
 }
